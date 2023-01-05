@@ -1,0 +1,14 @@
+<form action="/test" method="post">
+    <textarea name="text"></textarea>
+    <input type="submit" value="Test">
+  </form>
+  
+  {% if categories %}
+    <p>Predicted categories:</p>
+    <ul>
+      {% for label, score in categories.items() %}
+        <li>{{ label }} (score: {{ score }})</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
